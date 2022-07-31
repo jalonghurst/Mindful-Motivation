@@ -37,15 +37,19 @@ const SetPomodoro = () => {
             break;
         
     }
+    console.log(newTimer)
   }
+
+  const handleSubmit = () => {}
+  
   return (
     <div className='form-container'>
         <form noValidate>
             <div className='input-wrapper'>
                 {/* Value =  default value unless changed with input */}
-                <input className='input' name="work" onChange={handleChange} value=''></input>
-                <input className='input' name="shortBreak" onChange={handleChange} value=''></input>
-                <input className='input' name="longBreak" onChange={handleChange} value=''></input>
+                <input className='input' name="work" onChange={handleChange} value={newTimer.work}></input>
+                <input className='input' name="shortBreak" onChange={handleChange} value={newTimer.short}></input>
+                <input className='input' name="longBreak" onChange={handleChange} value={newTimer.long}></input>
             </div>
             <Button title='Set Timer' _callback={handleSubmit} />
 
