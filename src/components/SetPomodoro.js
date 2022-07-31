@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import Button from './Button'
 
-const SetPomodoro = () => {
+const SetPomodoro = () => { 
     
-  const [newTimer, setNewTimer] = useState[{
+  const [newTimer, setNewTimer] = useState({
     // Default values for inputs. active here indicates which time to run by default
     work: 0.3,
     short: 0.2,
     long: 1,
     active: 'work'
-  }]
+  })
 
   const handleChange = input => {
     // Destructuring name and value out of right hand value in order to use in switch statement
@@ -32,6 +32,7 @@ const SetPomodoro = () => {
              ...newTimer,
              long: parseInt(value)
         })
+            break;
 
         default:
             break;
@@ -41,10 +42,9 @@ const SetPomodoro = () => {
   }
 
   const handleSubmit = () => {}
-  
   return (
     <div className='form-container'>
-        <form noValidate>
+        <form noValidate onSubmit={handleSubmit}>
             <div className='input-wrapper'>
                 {/* Value =  default value unless changed with input */}
                 <input className='input' name="work" onChange={handleChange} value={newTimer.work}></input>
