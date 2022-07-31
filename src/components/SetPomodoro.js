@@ -41,7 +41,10 @@ const SetPomodoro = () => {
     console.log(newTimer)
   }
 
-  const handleSubmit = () => {}
+  const handleSubmit = e => {
+    // Prevents browser from refreshing to default values when submitting new input values
+    e.preventDefault()
+  }
   return (
     <div className='form-container'>
         <form noValidate onSubmit={handleSubmit}>
