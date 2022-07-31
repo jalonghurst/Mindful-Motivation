@@ -42,14 +42,14 @@ const SetPomodoro = () => {
   }
 
   const handleSubmit = e => {
-    // Prevents browser from refreshing to default values when submitting new input values
+    // preventDefault is called on the event when submitting the form to prevent a browser reload/refresh to default input values
     e.preventDefault()
   }
   return (
     <div className='form-container'>
         <form noValidate onSubmit={handleSubmit}>
             <div className='input-wrapper'>
-                {/* Value =  default value unless changed with input */}
+                {/* Value =  default values unless changed with input */}
                 <input className='input' name="work" onChange={handleChange} value={newTimer.work}></input>
                 <input className='input' name="shortBreak" onChange={handleChange} value={newTimer.short}></input>
                 <input className='input' name="longBreak" onChange={handleChange} value={newTimer.long}></input>
