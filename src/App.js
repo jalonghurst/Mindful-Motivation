@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import Button from './components/Button'
 import CountdownAnimation from './components/CountdownAnimation'
+import InspirationalQuotes from './components/InspirationalQuotes'
 import SetPomodoro from './components/SetPomodoro'
 import { SettingsContext } from './context/SettingsContext'
 
@@ -21,6 +22,7 @@ const App = () => {
 
   return (
     <div className="container">
+      <InspirationalQuotes/>
       <h1>Pomodoro</h1>
       <small>Be productive the right way.</small>
       {pomodoro !== 0 ?
