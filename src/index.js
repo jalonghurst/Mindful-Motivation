@@ -1,13 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import SettingsContextProvider from './context/SettingsContext';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+ReactDOM.render(
+  <SettingsContextProvider>
     <App />
-  </React.StrictMode>
+  </SettingsContextProvider>,
+  document.getElementById('root')
 );
-
