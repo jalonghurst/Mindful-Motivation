@@ -20,7 +20,7 @@ code {
   justify-content: center;
   min-height: 100vh;
   background: rgb(39,42,85);
-  background: radial-gradient(circle, #1E2140 0%, #151932 65%); 
+  background: radial-gradient(circle, #222542 0%, #151932 65%); 
 }
 
 .container h1 {
@@ -39,15 +39,21 @@ code {
 }
 
 .quote-container {
-  margin-top: 10%;
+  margin-top: 5%;
+  padding: 2%;
   width: 40%;
   height: auto;
-  /* border: #f5f6f7 solid 2px; */
+  border: #09325c solid 2px;
   border-radius: 5%;
-  font-family: roboto-mono, monospace;
+  font-family:  monospace, roboto-mono;
+  /* font-style: italic; */
   color: #f5f6f7;
   word-wrap: break-word;
   text-align: center;
+}
+
+small {
+  padding: 1%;
 }
 
 .active-label {
